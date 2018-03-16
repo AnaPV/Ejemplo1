@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EMPRESA</title>
+	 
+	<link rel="stylesheet" type="text/css" href="statics/css/style.css">
+</head>
+<body>
+	<nav>
+		<center>
+			<img id="icono" src="https://www.incp.org.co/wp-content/uploads/2017/09/empresas.jpg">
+			<h1 id="titulo">EMPRESAS COLOMBIANAS</h1 >
+		</center>
+		<div><h3>
+				<a class="iper" href="{%url 'vista_contacto'%}">contacto</a>
+				<a class="iper" href=" {% url 'vista_metodos'%} ">metodos</a>
+				
+			</h3>
+
+
+		</div>
+		<div id="lista">
+			{% for i in empresas %}
+				<p>	{{i}}	</p>
+				{% endfor %}
+				
+		</div>
+
+	</nav>
+
+</body>
+</html>

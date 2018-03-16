@@ -1,0 +1,22 @@
+{% block contenido%}
+{% if info_ingresado %}
+			La informacion ingresada es: 
+			{{nombres}}
+			{{edad}}
+			{{fechanac}}
+			{{Celular}}
+			{{foreverAlone}}
+			{{sexo}}
+			{{usuario}}
+			{{contraseña}}
+			{{correo}
+			
+	{% else %}
+
+		
+			{% csrf_token %}
+			{{ formulario1.as_p }}
+			<input type="submit" value=" ENVIAR ">
+		
+	{% endif %}
+{% endblock %}

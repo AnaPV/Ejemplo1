@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block titulo %}
+{%load staticfiles%}
+  Productos, Marcas, Categorias
+}
+{% endblock %}
+{% block contenido %}
+  <h1>Administracion</h1>
+  <link rel="stylesheet" href="static/js/fun_eliminar.js">
+
+  <h2>Productos</h2>
+  <a href="{% url 'vista_lista_producto' %}">Listar Productos</a>
+  <a href="{% url 'vista_agregar_producto' %}">Agregar Productos</a>
+  <script type="text/javascript"></script>
+
+  <h2>Marcas</h2>
+  <a href="{% url 'vista_lista_marca' %}">Listar Marcas</a>
+  <a href="{% url 'vista_agregar_marca' %}">Agregar Marcas</a>
+
+  <h2>Categorias</h2>
+  <a href="">Listar Categorias</a>
+  <a href="">Agregar Categorias</a>
+
+ {% endblock %}

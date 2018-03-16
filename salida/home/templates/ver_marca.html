@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block titulo %}
+  {{p.nombre}}
+{% endblock %}
+
+{% block contenido %}
+  <h1>Detalle</h1>
+  <table border="2", style="width:80%">
+    <tr>
+    	<th>Id</th>
+        <th>Nombre</th>
+	</tr>
+	<tr>
+        <td>{{ m.id }}</td>
+  		<td>{{ m.nombre }}</td>
+    </tr>
+    <a href="{% url 'vista_ver_marca' id_marc=m.id %}"></a>
+  
+    </table>
+  
+ {% endblock %}

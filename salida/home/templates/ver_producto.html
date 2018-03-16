@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block titulo %}
+  {{p.nombre}}
+{% endblock %}
+
+{% block contenido %}
+  <h1>Detalle</h1>
+    <table border="2", style="width:80%">
+    <tr>
+    	<th>Id</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Status</th>
+        <th>Categoria</th>
+        <th>Marca</th>
+	</tr>
+	<tr>
+        <img src="media/fotos/{{p.foto}}">
+        <td>{{ p.id }}</td>
+  		<td>{{ p.nombre }}</td>
+  		<td>{{ p.precio }}</td>
+ 		<td>{{ p.status }}</td>
+ 		<td>{{ p.categoria }}</td>
+ 		<td>{{ p.marca }}</td>
+
+    </tr>
+    <a href="{% url 'vista_ver_producto' id_prod=p.id %}"></a>
+  
+    </table>
+  
+ {% endblock %}
